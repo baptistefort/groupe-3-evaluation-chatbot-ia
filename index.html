@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Retour de présentation du Groupe 3 : chatbot IA, bouton flottant, démo live, RAG, prise de parole et notes à gratter.">
+  <title>Groupe 3 - Évaluation Chatbot IA</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23E50914'/%3E%3Cpath d='M8 10h48v44H8z' fill='%23fff' stroke='%23050505' stroke-width='5'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='22' font-family='Arial' font-weight='900' fill='%23050505'%3EG3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./dist/styles.css">
+  <script defer src="./src/main.js"></script>
+</head>
+<body>
+  <div class="cursor-dot hidden md:block" data-cursor-dot></div>
+  <div class="fixed left-0 top-0 z-50 h-2 w-full bg-paper">
+    <div class="progress-bar h-full bg-blood" data-progress></div>
+  </div>
+
+  <header class="sticky top-2 z-40 mx-auto mt-4 w-[min(1220px,calc(100%-28px))] border-[3px] border-ink bg-paper shadow-neo">
+    <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+      <a href="#top" class="font-display text-2xl uppercase leading-none">Groupe 3</a>
+      <nav class="flex flex-wrap items-center gap-2">
+        <a class="neo-btn shadow-none" href="#demo">Démo</a>
+        <a class="neo-btn shadow-none" href="#rag">RAG</a>
+        <a class="neo-btn shadow-none" href="#oral">Oral</a>
+        <a class="neo-btn bg-blood text-paper shadow-none" href="#notes">Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section-wrap min-h-[calc(100vh-90px)] pt-10">
+      <div class="grid items-stretch gap-6 lg:grid-cols-[1fr_.78fr]">
+        <div class="reveal neo-card p-6 md:p-10">
+          <span class="section-label">Évaluation du projet</span>
+          <h1 class="display-title mt-7">Chatbot IA : grosse démo, vrai niveau.</h1>
+          <p class="body-copy mt-7 max-w-4xl">
+            Titouan, Noah Denis, Noah Chevalier, Tom Bernard, Mathieu Goulpeau : votre présentation était franchement très solide.
+            Vous avez moins joué la carte des slides et beaucoup plus la carte du concret, avec une démo live qui a porté le projet.
+            Le bouton flottant, le chatbot, la connexion au RAG, la prise de parole et la partie commerciale : tout était clair.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="neo-btn bg-blood text-paper" href="#section-04">Voir la démo</a>
+            <a class="neo-btn" href="#notes">Gratter les notes</a>
+          </div>
+        </div>
+        <div class="reveal neo-card-black overflow-hidden p-0">
+          <div class="border-b-[3px] border-paper bg-blood px-5 py-4 font-mono text-xs font-black uppercase">Signal live</div>
+          <canvas class="h-full min-h-[430px] w-full" data-signal-canvas aria-label="Visualisation abstraite du chatbot en démo live"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden border-y-[3px] border-ink bg-blood py-4 text-paper">
+      <div class="ticker-track gap-10 font-display text-5xl uppercase leading-none">
+        <span>Démo live</span><span>Bouton flottant</span><span>RAG connecté</span><span>Prise de parole propre</span><span>Commercial clair</span>
+        <span>Démo live</span><span>Bouton flottant</span><span>RAG connecté</span><span>Prise de parole propre</span><span>Commercial clair</span>
+      </div>
+    </section>
+
+    <section id="section-02" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-[.7fr_1fr]">
+        <div class="reveal neo-card-red p-6 md:p-8">
+          <span class="tiny-caps border-[3px] border-paper px-3 py-2">L'équipe</span>
+          <h2 class="section-title mt-6">Tout le monde a parlé.</h2>
+          <p class="body-copy-light mt-6">
+            Et ça change tout. On sentait que le projet n'était pas porté par une seule personne.
+            Chacun avait une place, chacun a apporté un truc, et la présentation respirait bien.
+          </p>
+        </div>
+        <div class="reveal grid grid-cols-2 gap-4 md:grid-cols-3">
+          <span class="name-pill">Titouan</span>
+          <span class="name-pill">Noah Denis</span>
+          <span class="name-pill">Noah Chevalier</span>
+          <span class="name-pill">Tom Bernard</span>
+          <span class="name-pill">Mathieu Goulpeau</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-03" class="section-wrap">
+      <div class="grid gap-5 md:grid-cols-3">
+        <article class="reveal neo-card p-6 hit-zone">
+          <p class="tiny-caps text-blood">Point fort 01</p>
+          <h3 class="mt-5 font-display text-5xl uppercase leading-none">Démo réelle</h3>
+          <p class="body-copy mt-5">Vous avez montré le chatbot au lieu de seulement en parler. C'est exactement ce qu'il fallait faire.</p>
+        </article>
+        <article class="reveal neo-card-black p-6 hit-zone">
+          <p class="tiny-caps text-blood">Point fort 02</p>
+          <h3 class="mt-5 font-display text-5xl uppercase leading-none">RAG solide</h3>
+          <p class="body-copy-light mt-5">Le chatbot répondait bien à la demande utilisateur et on sentait la connexion au contexte.</p>
+        </article>
+        <article class="reveal neo-card-red p-6 hit-zone">
+          <p class="tiny-caps">Point fort 03</p>
+          <h3 class="mt-5 font-display text-5xl uppercase leading-none">Oral propre</h3>
+          <p class="body-copy-light mt-5">La parole était bien répartie, et la partie commerciale a bien servi le projet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="demo" class="section-wrap">
+      <div class="reveal neo-card overflow-hidden">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b-[3px] border-ink bg-blood px-5 py-4 text-paper">
+          <p class="font-mono text-xs font-black uppercase">Section 04 / Démo live</p>
+          <div class="flex gap-2"><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span></div>
+        </div>
+        <div class="demo-screen p-5 md:p-8">
+          <div class="grid gap-5 lg:grid-cols-[1fr_.72fr]">
+            <div class="scan-panel border-[3px] border-paper bg-ink p-5 text-paper">
+              <p class="tiny-caps text-blood">Live console</p>
+              <div class="terminal-lines mt-6 font-mono text-sm font-black leading-8 md:text-base">
+                <span>&gt; bouton flottant détecté</span>
+                <span>&gt; question utilisateur envoyée</span>
+                <span>&gt; contexte RAG récupéré</span>
+                <span>&gt; réponse générée</span>
+                <span class="text-blood">&gt; démo validée</span>
+              </div>
+            </div>
+            <div class="border-[3px] border-paper bg-paper p-5 text-ink shadow-red">
+              <p class="tiny-caps text-blood">Ce que j'ai vu</p>
+              <h2 class="section-title mt-6 text-[clamp(2rem,4vw,4.4rem)]">Pas une promesse. Une preuve.</h2>
+              <p class="body-copy mt-5">
+                La démo live a rendu le projet beaucoup plus concret. On voyait le chatbot fonctionner, on voyait le bouton flottant,
+                et on comprenait directement comment l'intégrer sur une vraie page.
+              </p>
+            </div>
+          </div>
+          <p class="mt-5 border-[3px] border-paper bg-blood p-4 font-mono text-sm font-black uppercase text-paper command-caret" data-live-line></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-05" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-[.8fr_1fr]">
+        <div class="reveal neo-card-red p-6 md:p-10">
+          <span class="tiny-caps border-[3px] border-paper px-3 py-2">Bouton flottant</span>
+          <h2 class="section-title mt-6">Là, on parle d'un vrai usage client.</h2>
+          <p class="body-copy-light mt-6">
+            Le bouton flottant, c'était une très bonne idée. C'est le détail qui fait passer le chatbot de “projet de cours”
+            à “outil qu'on peut mettre sur un site”. Franchement, c'était bien vu.
+          </p>
+        </div>
+        <div class="reveal relative min-h-[430px] border-[3px] border-ink bg-paper p-5 shadow-hard">
+          <div class="absolute left-5 top-5 h-10 w-40 border-[3px] border-ink bg-ink"></div>
+          <div class="absolute left-5 top-20 h-5 w-[60%] border-[3px] border-ink bg-blood"></div>
+          <div class="absolute left-5 top-32 h-5 w-[84%] border-[3px] border-ink bg-paper"></div>
+          <div class="absolute left-5 top-44 h-5 w-[70%] border-[3px] border-ink bg-paper"></div>
+          <div class="absolute bottom-6 right-6 grid h-20 w-20 place-items-center border-[3px] border-ink bg-blood font-display text-4xl text-paper shadow-neo animate-pulseHard">IA</div>
+          <div class="absolute bottom-28 right-6 w-[min(300px,70vw)] border-[3px] border-ink bg-paper p-4 shadow-neo">
+            <p class="tiny-caps text-blood">Chatbot</p>
+            <p class="mt-2 font-black">Bonjour, je peux vous aider à trouver la bonne info.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rag" class="section-wrap">
+      <div class="reveal text-center">
+        <span class="section-label">RAG</span>
+        <h2 class="section-title mx-auto mt-6 max-w-5xl">Le chatbot répondait bien parce qu'il était bien connecté.</h2>
+        <p class="body-copy mx-auto mt-6 max-w-3xl">
+          Ce que j'ai aimé, c'est que les réponses ne donnaient pas l'impression de sortir de nulle part.
+          On sentait que vous aviez relié le chatbot à une base de connaissance, avec une vraie logique de récupération.
+        </p>
+      </div>
+      <div class="mt-10 grid items-center gap-5 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
+        <div class="reveal rag-node">Question utilisateur</div>
+        <div class="rag-arrow">→</div>
+        <div class="reveal rag-node bg-blood text-paper">Recherche RAG</div>
+        <div class="rag-arrow">→</div>
+        <div class="reveal rag-node">Réponse cadrée</div>
+      </div>
+    </section>
+
+    <section id="section-07" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="reveal neo-card-black p-6 md:p-10">
+          <p class="tiny-caps text-blood">Demande utilisateur</p>
+          <h2 class="section-title mt-6">Le chatbot ne partait pas dans tous les sens.</h2>
+          <p class="body-copy-light mt-6">
+            Il répondait bien à la demande. Il restait dans le sujet, il utilisait le bon contexte, et il donnait une réponse utile.
+            Pour une démo live, c'est un très bon signe.
+          </p>
+        </div>
+        <div class="reveal grid gap-4">
+          <div class="neo-card p-5">
+            <p class="tiny-caps text-blood">Utilisateur</p>
+            <p class="mt-3 text-2xl font-black">“Je veux comprendre ce que vous proposez.”</p>
+          </div>
+          <div class="neo-card-red p-5">
+            <p class="tiny-caps">Agent IA</p>
+            <p class="mt-3 text-2xl font-black">Réponse utile, contexte récupéré, ton maîtrisé.</p>
+          </div>
+          <div class="neo-card p-5">
+            <p class="tiny-caps text-blood">Moi devant la démo</p>
+            <p class="mt-3 text-2xl font-black">OK, là on voit que ça marche.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-08" class="section-wrap">
+      <div class="reveal neo-card p-6 md:p-10">
+        <div class="grid gap-8 lg:grid-cols-[.75fr_1fr]">
+          <div>
+            <span class="section-label">Technique</span>
+            <h2 class="section-title mt-6">Tous les bons mots étaient là.</h2>
+          </div>
+          <p class="body-copy">
+            Vous avez parlé avec un vocabulaire technique clair. RAG, bouton flottant, connexion, agent, logique utilisateur :
+            ça ne faisait pas récitation. Ça donnait l'impression que vous compreniez vraiment ce que vous aviez construit.
+          </p>
+        </div>
+        <div class="mt-8 grid gap-3 md:grid-cols-4">
+          <div class="border-[3px] border-ink bg-blood p-4 font-mono text-sm font-black uppercase text-paper">RAG</div>
+          <div class="border-[3px] border-ink bg-paper p-4 font-mono text-sm font-black uppercase">Agent IA</div>
+          <div class="border-[3px] border-ink bg-ink p-4 font-mono text-sm font-black uppercase text-paper">Bouton flottant</div>
+          <div class="border-[3px] border-ink bg-blood p-4 font-mono text-sm font-black uppercase text-paper">Démo live</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-09" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-[1fr_.82fr]">
+        <div class="reveal neo-card-red p-6 md:p-10">
+          <p class="tiny-caps border-[3px] border-paper px-3 py-2">Codex / Claude Code</p>
+          <h2 class="section-title mt-6">Respect les gars.</h2>
+          <p class="body-copy-light mt-6">
+            Je ne sais pas si vous utilisez des systèmes IA comme Codex ou Claude Code tous les jours.
+            Si ce n'est pas le cas, respect, parce que vous étiez vraiment bien calés sur le sujet.
+            Les termes étaient là, la logique était là, et ça se sentait.
+          </p>
+        </div>
+        <div class="reveal neo-card p-6 md:p-10">
+          <p class="tiny-caps text-blood">Ce que ça montre</p>
+          <p class="mt-6 font-display text-6xl uppercase leading-none">Vous n'avez pas juste cliqué au hasard.</p>
+          <p class="body-copy mt-6">
+            Vous aviez une vraie compréhension de ce que vous faisiez. Même quand c'était technique, vous arriviez à le rendre compréhensible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="oral" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <div class="reveal neo-card-black p-6 md:p-8 lg:col-span-2">
+          <span class="tiny-caps text-blood">Prise de parole</span>
+          <h2 class="section-title mt-6">La parole circulait bien.</h2>
+          <p class="body-copy-light mt-6">
+            Honnêtement, la prise de parole était bonne entre vous. Tout le monde a parlé, personne n'a donné l'impression d'être posé là par hasard,
+            et ça rendait la présentation plus vivante.
+          </p>
+        </div>
+        <div class="reveal neo-card-red p-6 md:p-8">
+          <p class="font-display text-7xl uppercase leading-none">6/6</p>
+          <p class="body-copy-light mt-5">Toute l'équipe était présente dans la présentation, et ça compte vraiment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-11" class="section-wrap">
+      <div class="reveal grid gap-5 md:grid-cols-[.9fr_1.1fr]">
+        <div class="neo-card p-6 md:p-10">
+          <span class="section-label">Commercial</span>
+          <h2 class="section-title mt-6">La partie commerciale était top.</h2>
+          <p class="body-copy mt-6">
+            Vous avez bien expliqué la valeur du chatbot. On ne restait pas seulement sur “regardez, ça marche”.
+            Vous avez aussi montré pourquoi ça peut aider un client, comment ça s'intègre, et ce que ça peut apporter.
+          </p>
+        </div>
+        <div class="neo-card-red p-6 md:p-10">
+          <p class="tiny-caps border-[3px] border-paper px-3 py-2">Phrase que je garde</p>
+          <p class="mt-7 font-display text-6xl uppercase leading-none">Un chatbot utile, pas juste un chatbot qui parle.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-12" class="section-wrap">
+      <div class="reveal neo-card overflow-hidden">
+        <div class="grid gap-0 md:grid-cols-4">
+          <div class="border-b-[3px] border-ink bg-blood p-5 text-paper md:border-b-0 md:border-r-[3px]"><p class="tiny-caps">Démo</p><p class="mt-3 font-display text-6xl">Top</p></div>
+          <div class="border-b-[3px] border-ink p-5 md:border-b-0 md:border-r-[3px]"><p class="tiny-caps text-blood">RAG</p><p class="mt-3 font-display text-6xl">OK</p></div>
+          <div class="border-b-[3px] border-ink bg-ink p-5 text-paper md:border-b-0 md:border-r-[3px]"><p class="tiny-caps text-blood">Oral</p><p class="mt-3 font-display text-6xl">Clean</p></div>
+          <div class="p-5"><p class="tiny-caps text-blood">À revoir</p><p class="mt-3 font-display text-6xl">Lisibilité</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-13" class="section-wrap">
+      <div class="reveal text-center">
+        <span class="section-label">Point à améliorer</span>
+        <h2 class="section-title mx-auto mt-6 max-w-5xl">La réponse de l'agent IA devait donner plus envie de lire.</h2>
+        <p class="body-copy mx-auto mt-6 max-w-3xl">
+          C'est le seul vrai point que je mettrais à améliorer. Le contenu était là, mais la structure de la réponse manquait un peu de respiration :
+          titres, listes, phrases plus courtes, mise en avant des infos importantes. Ce n'est pas grave, parce que tout le reste était vraiment top.
+        </p>
+      </div>
+    </section>
+
+    <section id="section-14" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="reveal neo-card p-6 md:p-8">
+          <p class="tiny-caps text-blood">Avant</p>
+          <h3 class="mt-5 font-display text-5xl uppercase leading-none">Réponse compacte</h3>
+          <div class="agent-answer bad mt-6">
+            <p>Voici une réponse complète avec beaucoup d'informations dans un seul bloc, sans vraie hiérarchie, donc l'utilisateur doit faire l'effort de trier.</p>
+          </div>
+        </div>
+        <div class="reveal neo-card-red p-6 md:p-8">
+          <p class="tiny-caps">Après</p>
+          <h3 class="mt-5 font-display text-5xl uppercase leading-none">Réponse lisible</h3>
+          <div class="agent-answer good mt-6 text-ink">
+            <p><b>1. Réponse courte.</b><br>On répond d'abord au besoin.</p>
+            <p><b>2. Détails utiles.</b><br>On ajoute le contexte récupéré par le RAG.</p>
+            <p><b>3. Prochaine action.</b><br>On guide l'utilisateur simplement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-15" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-[.75fr_1fr]">
+        <div class="reveal neo-card-black p-6 md:p-10">
+          <span class="tiny-caps text-blood">Ce qui était parfait</span>
+          <h2 class="section-title mt-6">Votre choix de montrer le produit.</h2>
+          <p class="body-copy-light mt-6">
+            Pour ce type de projet, la démo vaut plus qu'un long discours. Vous l'avez compris.
+            En voyant le chatbot fonctionner, on comprend tout de suite ce qu'il fait et pourquoi il peut servir.
+          </p>
+        </div>
+        <div class="reveal grid gap-4">
+          <div class="neo-card p-5"><b>01.</b> Démo live, donc projet concret.</div>
+          <div class="neo-card p-5"><b>02.</b> Bouton flottant, donc vraie intégration possible.</div>
+          <div class="neo-card p-5"><b>03.</b> RAG connecté, donc réponses plus utiles.</div>
+          <div class="neo-card p-5"><b>04.</b> Commercial clair, donc valeur client visible.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-16" class="section-wrap">
+      <div class="reveal neo-card-red p-6 md:p-10">
+        <div class="grid gap-8 lg:grid-cols-[.8fr_1fr]">
+          <div>
+            <span class="tiny-caps border-[3px] border-paper px-3 py-2">Questions</span>
+            <h2 class="section-title mt-6">Vous étiez à l'aise.</h2>
+          </div>
+          <p class="body-copy-light">
+            Quand il fallait expliquer, vous aviez les bons mots. Quand il fallait montrer, vous avez montré.
+            Et quand il fallait relier la partie technique au besoin client, vous l'avez fait sans perdre le fil.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-17" class="section-wrap">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="reveal neo-card p-6 md:p-10">
+          <p class="tiny-caps text-blood">Expérience client</p>
+          <h2 class="section-title mt-6">Le bouton flottant aide beaucoup.</h2>
+          <p class="body-copy mt-6">
+            Sur un site, personne ne veut chercher longtemps où parler au chatbot.
+            Votre bouton flottant rend l'accès simple, visible et naturel. C'est exactement le genre de détail qui compte côté client.
+          </p>
+        </div>
+        <div class="reveal neo-card-black p-6 md:p-10">
+          <p class="tiny-caps text-blood">Le détail qui finit bien le projet</p>
+          <h2 class="section-title mt-6">Une réponse plus scannable.</h2>
+          <p class="body-copy-light mt-6">
+            Ajoutez des titres, des listes, des espaces, et une phrase de conclusion claire.
+            Vous gardez le même fond, mais vous rendez la réponse beaucoup plus agréable à lire.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-18" class="section-wrap">
+      <div class="reveal neo-card overflow-hidden">
+        <div class="border-b-[3px] border-ink bg-ink px-5 py-4 font-mono text-xs font-black uppercase text-paper">Bilan</div>
+        <div class="grid gap-0 lg:grid-cols-[.9fr_1.1fr]">
+          <div class="border-b-[3px] border-ink p-6 md:p-10 lg:border-b-0 lg:border-r-[3px]">
+            <h2 class="section-title">J'ai vraiment bien aimé.</h2>
+          </div>
+          <div class="p-6 md:p-10">
+            <p class="body-copy">
+              Vous avez fait une très bonne présentation. Elle était concrète, bien portée, bien répartie, avec une vraie démo et une bonne compréhension technique.
+              Le chatbot répondait bien, le RAG était là, le bouton flottant donnait une vraie logique d'intégration, et la partie commerciale était très propre.
+            </p>
+            <p class="body-copy mt-5">
+              Le point à améliorer est simple : rendre les réponses de l'agent IA plus agréables à lire.
+              C'est un détail de finition, pas un problème de fond.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-19" class="section-wrap">
+      <div class="reveal neo-card-red p-6 md:p-10">
+        <span class="tiny-caps border-[3px] border-paper px-3 py-2">Ce que je retiens</span>
+        <h2 class="section-title mt-6">Vous avez fait une présentation qui ressemble à un vrai projet.</h2>
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div class="border-[3px] border-paper bg-paper p-5 text-ink"><b>Concret.</b><br>La démo live a porté la présentation.</div>
+          <div class="border-[3px] border-paper bg-ink p-5 text-paper"><b>Compris.</b><br>Les termes techniques et la logique RAG étaient là.</div>
+          <div class="border-[3px] border-paper bg-paper p-5 text-ink"><b>À finir.</b><br>Structurer les réponses IA pour mieux donner envie de lire.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="notes" class="section-wrap score-hidden">
+      <div class="reveal text-center">
+        <span class="section-label">Partie notes</span>
+        <h2 class="section-title mx-auto mt-6 max-w-5xl">Grattez les tickets pour révéler les notes.</h2>
+        <p class="body-copy mx-auto mt-6 max-w-3xl">
+          Les notes sont ici. Chaque ticket cache une partie de l'évaluation. Souris ou doigt, il faut gratter pour voir le résultat.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <article class="score-card neo-card p-6" data-cover="COMPRÉHENSION" data-score="5/5">
+          <div class="relative z-0">
+            <p class="tiny-caps text-blood">Compréhension</p>
+            <p class="score-pop mt-5 font-display text-7xl leading-none"></p>
+            <p class="body-copy mt-4">Vous maîtrisiez les termes, la logique du chatbot, le RAG, le bouton flottant et l'objectif du projet.</p>
+          </div>
+          <canvas aria-label="Ticket à gratter compréhension"></canvas>
+        </article>
+        <article class="score-card neo-card-black p-6" data-cover="DÉMO / RAG" data-score="5/5" data-dark="true">
+          <div class="relative z-0">
+            <p class="tiny-caps text-blood">Démo live / RAG</p>
+            <p class="score-pop mt-5 font-display text-7xl leading-none"></p>
+            <p class="body-copy-light mt-4">La démo était top, le chatbot répondait bien, et la connexion au RAG rendait le projet crédible.</p>
+          </div>
+          <canvas aria-label="Ticket à gratter démo et RAG"></canvas>
+        </article>
+        <article class="score-card neo-card-red p-6" data-cover="ORAL / COMMERCE" data-score="4,5/5">
+          <div class="relative z-0">
+            <p class="tiny-caps">Oral / commercial</p>
+            <p class="score-pop mt-5 font-display text-7xl leading-none"></p>
+            <p class="body-copy-light mt-4">Tout le monde a parlé, la présentation était fluide, et la partie commerciale a bien montré la valeur client.</p>
+          </div>
+          <canvas aria-label="Ticket à gratter oral et commercial"></canvas>
+        </article>
+        <article class="score-card neo-card p-6" data-cover="LISIBILITÉ" data-score="4,5/5">
+          <div class="relative z-0">
+            <p class="tiny-caps text-blood">Structure des réponses IA</p>
+            <p class="score-pop mt-5 font-display text-7xl leading-none"></p>
+            <p class="body-copy mt-4">Le fond était bon. Il faut juste rendre les réponses de l'agent plus structurées et plus agréables à lire.</p>
+          </div>
+          <canvas aria-label="Ticket à gratter lisibilité des réponses"></canvas>
+        </article>
+        <article class="score-card neo-card-black p-6 xl:col-span-2" data-cover="TOTAL FINAL" data-score="19/20" data-dark="true">
+          <div class="relative z-0">
+            <p class="tiny-caps text-blood">Total final</p>
+            <p class="score-pop mt-5 font-display text-8xl leading-none"></p>
+            <p class="body-copy-light mt-4">
+              Très grosse présentation : démo live, bouton flottant, RAG, prise de parole, commercial, technique. Il reste surtout la mise en forme des réponses IA à améliorer.
+            </p>
+          </div>
+          <canvas aria-label="Ticket à gratter total final"></canvas>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside class="chat-panel-demo neo-card p-4" data-chat-panel>
+    <p class="tiny-caps text-blood">Mini démo</p>
+    <p class="mt-3 font-black">Même la page a son bouton flottant. C'était obligé.</p>
+    <div class="mt-4 border-[3px] border-ink bg-smoke p-3 font-mono text-xs font-black">
+      RAG connecté → réponse utile → client moins perdu.
+    </div>
+  </aside>
+  <button class="chat-bubble-demo grid h-16 w-16 place-items-center border-[3px] border-ink bg-blood font-display text-2xl text-paper shadow-neo transition hover:-translate-x-1 hover:-translate-y-1" type="button" aria-label="Ouvrir la mini démo du bouton flottant" aria-expanded="false" data-chat-button>
+    IA
+  </button>
+
+  <footer class="border-t-[3px] border-ink bg-ink px-5 py-10 text-center text-paper">
+    <p class="font-mono text-xs font-black uppercase">Groupe 3 - Évaluation Chatbot IA</p>
+  </footer>
+</body>
+</html>
