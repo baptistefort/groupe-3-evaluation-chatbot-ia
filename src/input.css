@@ -279,11 +279,6 @@
   min-height: 86px;
 }
 
-.score-hidden .score-pop {
-  color: transparent;
-  text-shadow: none;
-}
-
 .score-finished .score-pop {
   animation: pulseHard 1.2s steps(2, end) 2;
 }

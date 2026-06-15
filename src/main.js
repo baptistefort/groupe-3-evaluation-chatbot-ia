@@ -105,7 +105,7 @@ function setupScratchCard(card) {
     event.preventDefault();
     const { x, y } = point(event);
     ctx.beginPath();
-    ctx.arc(x, y, 34, 0, Math.PI * 2);
+    ctx.arc(x, y, 42, 0, Math.PI * 2);
     ctx.fill();
     score.textContent = card.dataset.score || "";
     revealed = true;
@@ -119,7 +119,7 @@ function setupScratchCard(card) {
     for (let i = 3; i < sample.length; i += 32) {
       if (sample[i] < 60) transparent += 1;
     }
-    if (transparent / (sample.length / 32) > .48) {
+    if (transparent / (sample.length / 32) > .24) {
       card.classList.add("scratched");
       if ([...document.querySelectorAll(".score-card")].every((item) => item.classList.contains("scratched"))) {
         scoreSection.classList.add("score-finished");
