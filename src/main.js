@@ -5,7 +5,6 @@ const chatButton = document.querySelector("[data-chat-button]");
 const chatPanel = document.querySelector("[data-chat-panel]");
 const liveLine = document.querySelector("[data-live-line]");
 const cursorDot = document.querySelector("[data-cursor-dot]");
-const signalCanvas = document.querySelector("[data-signal-canvas]");
 
 function updateProgress() {
   const root = document.documentElement;
@@ -52,58 +51,6 @@ function rotateLiveLine() {
 }
 rotateLiveLine();
 setInterval(rotateLiveLine, 2300);
-
-function setupSignalCanvas() {
-  if (!signalCanvas) return;
-  const ctx = signalCanvas.getContext("2d");
-  let width = 0;
-  let height = 0;
-  let tick = 0;
-
-  function resize() {
-    const rect = signalCanvas.getBoundingClientRect();
-    width = Math.max(1, Math.floor(rect.width * devicePixelRatio));
-    height = Math.max(1, Math.floor(rect.height * devicePixelRatio));
-    signalCanvas.width = width;
-    signalCanvas.height = height;
-    ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-  }
-
-  function draw() {
-    const cssWidth = width / devicePixelRatio;
-    const cssHeight = height / devicePixelRatio;
-    ctx.clearRect(0, 0, cssWidth, cssHeight);
-    ctx.fillStyle = "#050505";
-    ctx.fillRect(0, 0, cssWidth, cssHeight);
-
-    for (let x = -40; x < cssWidth + 40; x += 32) {
-      const y = cssHeight / 2 + Math.sin((x + tick) * 0.025) * 55;
-      ctx.strokeStyle = x % 64 === 0 ? "#E50914" : "#FFFFFF";
-      ctx.lineWidth = x % 64 === 0 ? 4 : 2;
-      ctx.beginPath();
-      ctx.moveTo(x, cssHeight);
-      ctx.lineTo(x + 24, y);
-      ctx.lineTo(x + 48, cssHeight * .25);
-      ctx.stroke();
-      ctx.fillStyle = "#E50914";
-      ctx.fillRect(x + 20, y - 6, 12, 12);
-    }
-
-    ctx.strokeStyle = "#FFFFFF";
-    ctx.lineWidth = 3;
-    ctx.strokeRect(14, 14, cssWidth - 28, cssHeight - 28);
-    ctx.fillStyle = "#E50914";
-    ctx.fillRect(28 + (tick % Math.max(1, cssWidth - 86)), 26, 48, 8);
-
-    tick += 2;
-    requestAnimationFrame(draw);
-  }
-
-  resize();
-  window.addEventListener("resize", resize);
-  draw();
-}
-setupSignalCanvas();
 
 function setupScratchCard(card) {
   const canvas = card.querySelector("canvas");
